@@ -207,7 +207,7 @@ class TaskControllerTest extends TestCase
         $response->assertRedirect(route('tasks.index'));
         $this->assertDatabaseMissing('tasks', ['id' => $task->id]);
     }
-}
+
     // --- 認可テスト ---
 
     /** @test */
@@ -274,3 +274,4 @@ class TaskControllerTest extends TestCase
         // Assert
         $response->assertForbidden();
     }
+}
